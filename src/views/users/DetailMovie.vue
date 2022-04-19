@@ -265,7 +265,7 @@ onMounted(async()=>{
                 </h2>
                 <div v-if="detail_movie.status !== 'coming_soon'">
                     <img v-if="!$store.state.islogin" src="/assets/svg/Heart.svg" class="w-10 hover:cursor-pointer" @click="showLoginBox = true;">
-                    <img v-else :src="add_favorite.is_favorite ? `../../src/assets/svg/Heart_fill.svg` : `../../src/assets/svg/Heart.svg`" class="w-10 hover:cursor-pointer" @click="add_favorite.is_favorite = !add_favorite.is_favorite; addFavorite()">
+                    <img v-else :src="add_favorite.is_favorite ? `/assets/svg/Heart_fill.svg` : `../../src/assets/svg/Heart.svg`" class="w-10 hover:cursor-pointer" @click="add_favorite.is_favorite = !add_favorite.is_favorite; addFavorite()">
                 </div>
             </div>
             <div class="mt-8 flex flex-row gap-10">
