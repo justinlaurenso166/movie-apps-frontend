@@ -9,7 +9,7 @@ const favorites = ref([])
 
 const getFavorite = async()=>{
     try {
-        await axios.get("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user_favorite/user/"+user_id).then((res)=>{
+        await axios.get("https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user_favorite/user/"+user_id).then((res)=>{
             if(res.status === 200){
                 console.log(res.data)
                 if(res.data.length > 0){

@@ -47,7 +47,7 @@ const clearForm = () =>{
 
 const userLogin = async()=>{
     try {
-        await axios.post("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user/login", login_data).then((res)=>{
+        await axios.post("https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user/login", login_data).then((res)=>{
             if(res.status === 200){
                 createToast("Login Success",{
                     type: 'success',
@@ -80,7 +80,7 @@ const userLogin = async()=>{
 const userRegister = async() => {
     try {
         if(register_data.password === register_data.confirm_password){
-            await axios.post("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user/register", register_data).then((res)=>{
+            await axios.post("https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user/register", register_data).then((res)=>{
                 console.log(res.data)
                 if(res.status === 200){
                     createToast(res.data,{

@@ -23,7 +23,7 @@ const id = route.params.id;
 
 const getMovieByid = async()=>{
     try {
-        await axios.get(`http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movies/movie/${id}`).then((res)=>{
+        await axios.get(`https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movies/movie/${id}`).then((res)=>{
             if(res.status === 200){
                 previewImage.value = './../images/'+res.data[0].image
                 movie_data.img = res.data[0].image
@@ -55,7 +55,7 @@ const editMovie = async()=>{
     formData.append('status', movie_data.status)
     console.log(formData)
     try {
-        await axios.put("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movies/edit/"+id, formData).then((res)=>{
+        await axios.put("https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movies/edit/"+id, formData).then((res)=>{
             console.log(res.data)
             if(res.status === 200){
                 createToast(res.data,{

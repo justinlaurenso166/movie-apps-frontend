@@ -54,7 +54,7 @@ const error = reactive({
 
 const getMovieByid = async()=>{
     try {
-        await axios.get(`http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movies/movie/${movie_id}`).then((res)=>{
+        await axios.get(`https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movies/movie/${movie_id}`).then((res)=>{
             if(res.status === 200){
                 console.log(res.data)
                 detail_movie.value = res.data[0];
@@ -78,7 +78,7 @@ const getRating = async()=>{
         movie_id: movie_id,
     }
     try {
-        await axios.post("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movie_rating/user", find_rating).then((res)=>{
+        await axios.post("https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movie_rating/user", find_rating).then((res)=>{
             if(res.status === 200){
                 if(res.data.length > 0){
                     add_rating.rating = res.data[0].rating
@@ -112,7 +112,7 @@ const addStar = async()=>{
     }
     else{
         try {
-        await axios.post("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movie_rating/rate", add_rating).then((res)=>{
+        await axios.post("https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movie_rating/rate", add_rating).then((res)=>{
             console.log(res.data)
         })
         } catch (error) {
@@ -125,7 +125,7 @@ const addFavorite = async()=>{
     console.log("add")
     setTimeout(async()=>{
         try {
-            await axios.post("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user_favorite/add", add_favorite).then((res)=>{
+            await axios.post("https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user_favorite/add", add_favorite).then((res)=>{
             console.log(res.data)
             })
         } catch (error) {
@@ -140,7 +140,7 @@ const getFavorite = async()=>{
         movie_id: movie_id,
     }
     try {
-        await axios.post("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user_favorite/user", find_favorite).then((res)=>{
+        await axios.post("https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user_favorite/user", find_favorite).then((res)=>{
             if(res.status === 200){
                 console.log(res.data)
                 if(res.data.length > 0){
@@ -167,7 +167,7 @@ const clearForm = () =>{
 
 const userLogin = async()=>{
     try {
-        await axios.post("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user/login", login_data).then((res)=>{
+        await axios.post("https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user/login", login_data).then((res)=>{
             if(res.status === 200){
                 createToast("Login Success",{
                     type: 'success',
@@ -201,7 +201,7 @@ const userLogin = async()=>{
 const userRegister = async() => {
     try {
         if(register_data.password === register_data.confirm_password){
-            await axios.post("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user/register", register_data).then((res)=>{
+            await axios.post("https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user/register", register_data).then((res)=>{
                 console.log(res.data)
                 if(res.status === 200){
                     createToast(res.data,{
