@@ -77,7 +77,7 @@ onMounted(async()=>{
                     >
                         <swiper-slide v-for="movie in premiere_movie_limit" :key="movie.id" class="mb-8">
                             <div class="cursor-pointer" @click="$router.push({name: 'DetailMovie', params:{id: movie.id}})">
-                                <img :src="`/images/${movie.image}`" class="w-80 m-auto rounded-lg">
+                                <img :src="`https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/images/${movie.image}`" class="w-80 m-auto rounded-lg">
                                 <div>
                                     <h3 class="uppercase text-center font-bold py-5 tracking-wide">
                                         {{movie.name}}
@@ -112,7 +112,7 @@ onMounted(async()=>{
                     >
                         <swiper-slide v-for="movie in upcoming_movie_limit" :key="movie.id" class="mb-8">
                             <div class="cursor-pointer" @click="$router.push({name: 'DetailMovie', params:{id: movie.id}})">
-                                <img :src="`/images/${movie.image}`" class="w-80 m-auto rounded-lg">
+                                <img :src="`https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/images/${movie.image}`" class="w-80 m-auto rounded-lg">
                                 <div>
                                     <h3 class="uppercase text-center font-bold py-5 tracking-wide">
                                         {{movie.name}}

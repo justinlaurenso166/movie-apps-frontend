@@ -82,7 +82,7 @@ onMounted(async()=>{
                     <tr v-for="(movie, idx) in list_movies" :key="movie.id">
                         <td class="border-2 w-12 font-bold">{{idx+1}}</td>
                         <td class="border-2 p-5">
-                            <img :src="`/images/`+movie.image" class="w-32 h-42 m-auto">
+                            <img :src="`https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/images/`+movie.image" class="w-32 h-42 m-auto">
                         </td>
                         <td class="border-2 p-6 font-bold">
                             <span class="hover:underline hover:cursor-pointer" @click="$router.push({name: 'DetailMovieAdmin', params:{id: movie.id}})">
@@ -111,10 +111,10 @@ onMounted(async()=>{
                         <td class="border-2">
                             <span class="flex items-center justify-center gap-7">
                                 <div class="bg-red-500 rounded-lg p-1 hover:cursor-pointer" @click="remove_id= movie.id; showDeleteBox = true;">
-                                    <img src="../../assets/svg/Trash_alt.svg" class="w-7">
+                                    <img src="/assets/svg/Trash_alt.svg" class="w-7">
                                 </div>
                                 <div class="bg-green-500 rounded-lg p-1 hover:cursor-pointer" @click="$router.push({name: 'EditMovies', params:{id: movie.id}})">
-                                    <img src="../../assets/svg/Edit.svg" class="w-7">
+                                    <img src="/assets/svg/Edit.svg" class="w-7">
                                 </div>
                             </span>
                         </td>

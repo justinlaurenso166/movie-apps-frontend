@@ -264,13 +264,13 @@ onMounted(async()=>{
                     {{detail_movie.name}}
                 </h2>
                 <div v-if="detail_movie.status !== 'coming_soon'">
-                    <img v-if="!$store.state.islogin" src="../../assets/svg/Heart.svg" class="w-10 hover:cursor-pointer" @click="showLoginBox = true;">
+                    <img v-if="!$store.state.islogin" src="/assets/svg/Heart.svg" class="w-10 hover:cursor-pointer" @click="showLoginBox = true;">
                     <img v-else :src="add_favorite.is_favorite ? `../../src/assets/svg/Heart_fill.svg` : `../../src/assets/svg/Heart.svg`" class="w-10 hover:cursor-pointer" @click="add_favorite.is_favorite = !add_favorite.is_favorite; addFavorite()">
                 </div>
             </div>
             <div class="mt-8 flex flex-row gap-10">
                 <div class="w-60 text-center flex-0">
-                    <img :src="`/images/${detail_movie.image}`" class="rounded-lg">
+                    <img :src="`https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/images/${detail_movie.image}`" class="rounded-lg">
                 </div>
                 <div class="text-lg flex-1 pl-4 ">
                     <div>

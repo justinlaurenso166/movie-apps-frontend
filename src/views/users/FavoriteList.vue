@@ -37,7 +37,7 @@ onMounted(async()=>{
                 </div>
                 <div class="grid grid-cols-4 gap-10">
                     <div v-for="fav in favorites" :key="fav.id" @click="$router.push({name:'DetailMovie', params:{id: fav.movie_id}})">
-                        <img :src="`/images/${fav.image}`" class="rounded-lg">
+                        <img :src="`https://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/images/${fav.image}`" class="rounded-lg">
                         <h4 class="uppercase font-bold text-center mt-4">{{fav.name}}</h4>
                     </div>
                 </div>
