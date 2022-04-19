@@ -34,7 +34,7 @@ const addMovie = async()=>{
     formData.append('status', movie_data.status)
     console.log(formData)
     try {
-        await axios.post("/api/movies/add_movie", formData).then((res)=>{
+        await axios.post("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movies/add_movie", formData).then((res)=>{
             console.log(res.data)
             if(res.status === 200){
                 createToast(res.data,{

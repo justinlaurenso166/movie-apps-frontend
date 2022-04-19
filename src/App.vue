@@ -1,6 +1,6 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+// Check out https://vuejs.orghttp://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/sfc-script-setup.html#script-setup
 </script>
 
 <template>

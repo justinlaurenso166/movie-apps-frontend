@@ -13,7 +13,7 @@ const remove_id = ref("")
 
 const getListMovies = async()=>{
     try {
-        await axios.get("/api/movies/all").then((res)=>{
+        await axios.get("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movies/all").then((res)=>{
             console.log(res.data)
             if(res.status === 200){
                 list_movies.value = res.data
@@ -26,7 +26,7 @@ const getListMovies = async()=>{
 
 const deleteMovie = async()=>{
     try {
-        await axios.delete("/api/movies/delete/"+remove_id.value).then((res)=>{
+        await axios.delete("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movies/delete/"+remove_id.value).then((res)=>{
             console.log(res.data)
             if(res.status === 200){
                 showDeleteBox.value = false;

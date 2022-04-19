@@ -16,7 +16,7 @@ const upcoming_movie_limit = ref([]);
 
 const getPremiereMovie = async()=>{
     try {
-        await axios.get("/api/movies/premiere").then((res)=>{
+        await axios.get("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movies/premiere").then((res)=>{
             if(res.status === 200){
                 console.log(res.data)
                 premiere_movie_limit.value = res.data;
@@ -29,7 +29,7 @@ const getPremiereMovie = async()=>{
 
 const getUpcomingMovie = async()=>{
     try {
-        await axios.get("/api/movies/coming_soon").then((res)=>{
+        await axios.get("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/movies/coming_soon").then((res)=>{
             if(res.status === 200){
                 console.log(res.data)
                 upcoming_movie_limit.value = res.data;

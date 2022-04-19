@@ -20,7 +20,7 @@ const error = reactive({
 const login = async()=>{
     console.log(data_login)
     try {
-        await axios.post("/api/user/login", data_login).then((response)=>{
+        await axios.post("http://app-20047318-4869-4d06-b946-d19046744595.cleverapps.io/user/login", data_login).then((response)=>{
             console.log(response.data)
             if(response.status === 200){
                 if(response.data[0].autorithy === 1){
